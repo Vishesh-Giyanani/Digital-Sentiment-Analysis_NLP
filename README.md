@@ -17,6 +17,8 @@ f.	Scipy
 3.	Excel
 
 
+
+
 Project Background
 
 With about 4 G&B B2C businesses (Appliances, Interio, Locks and Security solutions), we need sentiment analysis in the Qualitative feedback we have received under NPS scores.
