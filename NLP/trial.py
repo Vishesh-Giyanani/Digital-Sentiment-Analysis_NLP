@@ -10,15 +10,18 @@ tokenizer = AutoTokenizer.from_pretrained(roberta)
 labels = ['Negative', 'Neutral', 'Positive']
 
 # Read the CSV file
-df = pd.read_csv('file.csv')
+df = pd.read_csv('NLP\Book2.csv')
 
 # Select the rows to analyze
 rows_to_analyze = [5, 7, 9, 11]
 df = df.iloc[rows_to_analyze]
 
+# Get the index of the column that contains the text data
+text_column_index = df.columns.get_loc('text')
+
 # Iterate over the rows of the DataFrame
 for index, row in df.iterrows():
-    tweet = row['text']
+    tweet = str(row[text_column_index])
 
     # Preprocess the tweet
     tweet_words = []
@@ -43,4 +46,4 @@ for index, row in df.iterrows():
         df.at[index, l] = s
 
 # Save the updated DataFrame to the CSV file
-df.to_csv('Book2.csv', index=False)
+df.to_csv('NLP\Final.csv', index=False)
