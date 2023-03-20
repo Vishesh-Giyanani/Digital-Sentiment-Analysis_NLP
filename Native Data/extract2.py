@@ -9,8 +9,6 @@ df2 = df.iloc[: , [5,7,9,11]].copy()
 
 df2 = df2.where(~df2.apply(lambda row: row.str.isalpha()).all(axis=1), other=np.nan)
 
-df2.to_csv('./NLP/trial.csv', index=False)
-
 for index, row in df.iterrows():
     text = str(row)
 
@@ -23,9 +21,11 @@ for index, row in df.iterrows():
     # Check for spelling errors
     misspelled_words = spell.unknown(words)
 
+    corrected_word = ''
+
     # Correct spelling errors
     for word in misspelled_words:
-        corrected_word = spell.correction(word)
+        corrected_word = str(spell.correction(word))
         text = text.replace(word, corrected_word)
 
-    print(text)
+    df2.to_csv('NLP/Final2.csv', index=False)
