@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Read the csv file into a pandas DataFrame
-df = pd.read_csv('./NLP/Final.csv')
+df = pd.read_csv('./NLP/Final.csv') 
 
 # Convert score and text columns to numeric data types
 df['score'] = pd.to_numeric(df['score'], errors='coerce')
@@ -20,7 +20,6 @@ df['text.2_Positive'] = pd.to_numeric(df['text.1_Positive'], errors='coerce')
 df['text.3_Negative'] = pd.to_numeric(df['text.1_Negative'], errors='coerce')
 df['text.3_Neutral'] = pd.to_numeric(df['text.1_Neutral'], errors='coerce')
 df['text.3_Positive'] = pd.to_numeric(df['text.1_Positive'], errors='coerce')
-
 
 # Define a function to calculate the label based on the given logic
 def calculate_label(row):
@@ -102,7 +101,6 @@ def calculate_label3(row):
         return 'Revised Detractor'
     else:
         return '  '
-
 
 # Apply the calculate_label3 function to the DataFrame to create a new column called 'label3'
 df['label3'] = df.apply(calculate_label3, axis=1)
