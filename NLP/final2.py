@@ -21,7 +21,7 @@ df['text.3_Negative'] = pd.to_numeric(df['text.1_Negative'], errors='coerce')
 df['text.3_Neutral'] = pd.to_numeric(df['text.1_Neutral'], errors='coerce')
 df['text.3_Positive'] = pd.to_numeric(df['text.1_Positive'], errors='coerce')
 
-# Define a function to calculate the label based on the given logic
+# Define a function to calculate the label based on the given logic for Business Unit 1
 def calculate_label(row):
     score = row['score']
     positive = row['text_Positive'] * 100
@@ -42,7 +42,7 @@ def calculate_label(row):
 # Apply the calculate_label function to the DataFrame to create a new column called 'label'
 df['label'] = df.apply(calculate_label, axis=1)
 
-# Define another function to calculate the label for score1
+# Define another function to calculate the label for score1 for Business Unit 2
 def calculate_label1(row):
     score = row['score1']
     positive = row['text.1_Positive']  * 100
@@ -63,7 +63,7 @@ def calculate_label1(row):
 # Apply the calculate_label1 function to the DataFrame to create a new column called 'label1'
 df['label1'] = df.apply(calculate_label1, axis=1)
 
-# Define another function to calculate the label for score2
+# Define another function to calculate the label for score2 for Business Unit 3
 def calculate_label2(row):
     score = row['score2']
     positive = row['text.2_Positive']  * 100
@@ -84,7 +84,7 @@ def calculate_label2(row):
 # Apply the calculate_label2 function to the DataFrame to create a new column called 'label2'
 df['label2'] = df.apply(calculate_label2, axis=1)
 
-# Define another function to calculate the label for score3
+# Define another function to calculate the label for score3 for Business Unit 4
 def calculate_label3(row):
     score = row['score3']
     positive = row['text.3_Positive'] * 100
