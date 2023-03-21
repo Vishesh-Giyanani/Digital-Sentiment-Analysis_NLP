@@ -1,4 +1,27 @@
 import pandas as pd
+import csv
+
+# open the CSV file
+with open('./NLP/Final.csv', 'r') as file:
+    # create a csv reader object
+    reader = csv.reader(file)
+
+    # read the header row and store it in a list
+    header = next(reader)
+
+    # replace the column name at index 2 with a new name
+    header[4] = 'score'
+    header[6] = 'score1'
+    header[8] = 'score2'
+    header[10] = 'score3'
+
+# write the updated header row back to the CSV file
+with open('./NLP/Final.csv', 'w', newline='') as file:
+    # create a csv writer object
+    writer = csv.writer(file)
+
+    # write the updated header row to the CSV file
+    writer.writerow(header)
 
 # Read the csv file into a pandas DataFrame
 df = pd.read_csv('./NLP/Final.csv') 
