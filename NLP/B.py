@@ -1,48 +1,32 @@
+##This code is written with respect to 'column names'
+
 import pandas as pd
-import csv
 
-# open the CSV file
-with open('./NLP/Final.csv', 'r') as file:
-    # create a csv reader object
-    reader = csv.reader(file)
+# Loading CSV file into a DataFrame
+df = pd.read_csv('./NLP/Final.csv')
 
-    # read the header row and store it in a list
-    header = next(reader)
+# Renaming columns by indexes
+df.rename(columns={df.columns[4]: 'score'}, inplace=True)
+df.rename(columns={df.columns[6]: 'score1'}, inplace=True)
+df.rename(columns={df.columns[8]: 'score2'}, inplace=True)
+df.rename(columns={df.columns[10]: 'score3'}, inplace=True)
 
-    # replace the column name at index 2 with a new name
-    header[4] = 'score'
-    header[6] = 'score1'
-    header[8] = 'score2'
-    header[10] = 'score3'
+# Replace 'Not at all likely0' with 0 in the score, score1, score2,score3 column
+df[['score', 'score1', 'score2','score3']] = df[['score', 'score1', 'score2','score3']].replace('Not at all likely0', 0)
+# Replace 'Extremely likely10' with 10 in the score, score1, score2,score3 column
+df[['score', 'score1', 'score2','score3']] = df[['score', 'score1', 'score2','score3']].replace('Extremely likely10', 10)
 
-# write the updated header row back to the CSV file
-with open('./NLP/Final.csv', 'w', newline='') as file:
-    # create a csv writer object
-    writer = csv.writer(file)
+# Saving/overwriting the updated DataFrame to  CSV file
+df.to_csv('./NLP/Final.csv', index=False)
 
-    # write the updated header row to the CSV file
-    writer.writerow(header)
-
-# Read the csv file into a pandas DataFrame
-df = pd.read_csv('./NLP/Final.csv') 
 
 # Convert score and text columns to numeric data types
 df['score'] = pd.to_numeric(df['score'], errors='coerce')
-df['score1'] = pd.to_numeric(df['score'], errors='coerce')
-df['score2'] = pd.to_numeric(df['score'], errors='coerce')
-df['score3'] = pd.to_numeric(df['score'], errors='coerce')
-df['text_Negative'] = pd.to_numeric(df['text_Negative'], errors='coerce')
-df['text_Neutral'] = pd.to_numeric(df['text_Neutral'], errors='coerce')
-df['text_Positive'] = pd.to_numeric(df['text_Positive'], errors='coerce')
-df['text.1_Negative'] = pd.to_numeric(df['text.1_Negative'], errors='coerce')
-df['text.1_Neutral'] = pd.to_numeric(df['text.1_Neutral'], errors='coerce')
-df['text.1_Positive'] = pd.to_numeric(df['text.1_Positive'], errors='coerce')
-df['text.2_Negative'] = pd.to_numeric(df['text.1_Negative'], errors='coerce')
-df['text.2_Neutral'] = pd.to_numeric(df['text.1_Neutral'], errors='coerce')
-df['text.2_Positive'] = pd.to_numeric(df['text.1_Positive'], errors='coerce')
-df['text.3_Negative'] = pd.to_numeric(df['text.1_Negative'], errors='coerce')
-df['text.3_Neutral'] = pd.to_numeric(df['text.1_Neutral'], errors='coerce')
-df['text.3_Positive'] = pd.to_numeric(df['text.1_Positive'], errors='coerce')
+df['score1'] = pd.to_numeric(df['score1'], errors='coerce')
+df['score2'] = pd.to_numeric(df['score2'], errors='coerce')
+df['score3'] = pd.to_numeric(df['score3'], errors='coerce')
+
+
 
 # Define a function to calculate the label based on the given logic for Business Unit 1
 def calculate_label(row):
@@ -130,3 +114,5 @@ df['label3'] = df.apply(calculate_label3, axis=1)
 
 # Write the updated DataFrame to a new csv file
 df.to_csv('./NLP/Final2.csv', index=False)
+
+
