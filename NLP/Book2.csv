@@ -1,4 +1,25 @@
-,StartDate,your value,ResponseId,B2A_1,B2_1A,B2L_1,B2_1L,B2I_1,B2_1I,B2S_1,B2_1S,S3,S4,S5,S6a,S6b,Z1,Z2,Z3,Z4,Z5,Z1
+,StartDate,EndDate,ResponseId,B2A_1,B2_1A,B2L_1,B2_1L,B2I_1,B2_1I,B2S_1,B2_1S,S3,S4,S5,S6a,S6b,Z1,Z2,Z3,Z4,Z5,Z1
+0,Start Date,End Date,Response ID,"Based on your experience, how likely are you to recommend them to a friend or colleague?
+
+Large Home Appliances - Godrej",Why did you give this score to Godrej?A,"Based on your experience, how likely are you to recommend them to a friend or colleague?
+
+
+
+Locks - Godrej",Why did you give this score to Godrej?L,"Based on your experience, how likely are you to recommend them to a friend or colleague?
+
+
+
+Home Furniture, Storage and Kitchen - Godrej",Why did you give this score to Godrej?I,"Based on your experience, how likely are you to recommend them to a friend or colleague?
+
+
+
+Security Solutions (Lockers and Home Safes) - Godrej",Why did you give this score to Godrej & Boyce / Godrej?S,Which city do you currently live in?,How old are you?,What is your gender?,"What is the highest education level that you have attained?
+
+[Please choose one appropriate answer]",Which of the following items do you own? Please select all that apply.,"What is your occupation? 
+[Please choose one appropriate answer]",What does the following best describe your Average Household income per annum (in INR)?,What is your current marital status?,What are their ages?,How many people are you living with?,"What is your occupation? 
+[Please choose one appropriate answer]"
+1,"{""ImportId"":""startDate"",""timeZone"":""America/Denver""}","{""ImportId"":""endDate"",""timeZone"":""America/Denver""}","{""ImportId"":""_recordId""}","{""ImportId"":""QID30025_x1""}","{""ImportId"":""QID30071_TEXT""}","{""ImportId"":""QID30068_x1""}","{""ImportId"":""QID30076_TEXT""}","{""ImportId"":""QID30069_x1""}","{""ImportId"":""QID30077_TEXT""}","{""ImportId"":""QID30070_x1""}","{""ImportId"":""QID30078_TEXT""}","{""ImportId"":""QID30003""}","{""ImportId"":""QID30004""}","{""ImportId"":""QID30005""}","{""ImportId"":""QID30006""}","{""ImportId"":""QID30007""}","{""ImportId"":""QID30059""}","{""ImportId"":""QID30060""}","{""ImportId"":""QID30061""}","{""ImportId"":""QID30062""}","{""ImportId"":""QID30063""}","{""ImportId"":""QID30059""}"
+2,31-08-2022 02:50,31-08-2022 03:02,R_1GKrmqmrhIsV1j2,Not at all likely0,s,,,,,,,Hyderabad,46-50,Male,Literate but no formal school/ School up to 4 years,"Electricity connection,Ceiling Fan,LPG Stove/ Gas Connection,Two-Wheeler,Colour TV,Refrigerator,Washing machine,Personal computer/ Laptop",Service (Rural or Urban),10-15 Lacs,"Married, no kids ",,No one (living by myself),Service (Rural or Urban)
 3,31-08-2022 03:08,31-08-2022 03:50,R_2PtDeOQ7jSZMkC8,,fthg,Not at all likely0,,Not at all likely0,,,,Kochi,41-45,Female,SSC / HSC,"Electricity connection,Ceiling Fan,LPG Stove/ Gas Connection,Two-Wheeler,Colour TV,Refrigerator,Washing machine,Air Conditioner",Business owner or Industrialist with 1-49 employees,15-20 Lacs,"Single (includes divorced/ widowed), no kids ",,3 people,Business owner or Industrialist with 1-49 employees
 4,31-08-2022 21:08,31-08-2022 21:12,R_pmac3PtlCLpoOIx,,,,,,,,,Lucknow,36-40,Male,Graduation/ Post Graduation: Professional,"Ceiling Fan,Two-Wheeler,Refrigerator,Washing machine,Car/ Jeep/ Van,Air Conditioner",Business owner or Industrialist with 1-49 employees,20-25 Lacs,"Married, no kids ",,2 people,Business owner or Industrialist with 1-49 employees
 5,31-08-2022 21:15,31-08-2022 21:32,R_1QtsGGovmx38mZR,,,,,,,,,Ahmedabad,36-40,Male,Graduation/ Post Graduation: Professional,"LPG Stove/ Gas Connection,Two-Wheeler,Refrigerator,Washing machine,Car/ Jeep/ Van,Air Conditioner",Government official,15-20 Lacs,"Married, no kids ",,No one (living by myself),Government official
