@@ -13,13 +13,17 @@ labels = ['Negative', 'Neutral', 'Positive']
 df = pd.read_csv('NLP/Book2.csv')
 
 # Select the columns to analyze
-text_columns = ["Appliances-Score", "Locks-Score", "Interio-Score", "Security-Score"]
+columns_to_analyze = [5, 7, 9, 11]
+text_columns = df.columns[columns_to_analyze]
 
 # Iterate over the text columns of the DataFrame
 for text_column in text_columns:
+    # Get the index of the current text column
+    text_column_index = df.columns.get_loc(text_column)
+
     # Iterate over the rows of the DataFrame
     for index, row in df.iterrows():
-        tweet = str(row[text_column])
+        tweet = str(row[text_column_index])
 
         # Preprocess the tweet
         tweet_words = []
