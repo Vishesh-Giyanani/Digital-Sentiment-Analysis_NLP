@@ -53,13 +53,11 @@ for text_column in text_columns:
             s = scores[i]
             df.at[index, f"{text_column}_{l}"] = s
 
-df.replace(0.23950220644474, 'Null')
-df.replace(0.52818888425827 , 'Null')
-df.replace(0.232308998703956, 'Null')
-
+# Replace values in DataFrame with 'Null'
+df2 = df.round(10).replace({0.2395022064: 'Null', 0.5281888843: 'Null', 0.2323089987: 'Null'})
 
 # Save the updated DataFrame to the CSV file
-df.to_csv('NLP/Final.csv', index=False)
+df2.to_csv('NLP/Final.csv', index=False)
 
 
 
