@@ -15,11 +15,16 @@ df = pd.read_csv('NLP/Book2.csv')
 # Select the columns to analyze
 text_columns = ["Appliances-Score", "Locks-Score", "Interio-Score", "Security-Score"]
 
+
 # Iterate over the text columns of the DataFrame
 for text_column in text_columns:
     # Iterate over the rows of the DataFrame
     for index, row in df.iterrows():
         tweet = str(row[text_column])
+
+        # Skip the analysis if the tweet is null
+        if tweet.strip() == '':
+            continue
 
         # Preprocess the tweet
         tweet_words = []
@@ -45,3 +50,6 @@ for text_column in text_columns:
 
 # Save the updated DataFrame to the CSV file
 df.to_csv('NLP/Final.csv', index=False)
+
+
+
