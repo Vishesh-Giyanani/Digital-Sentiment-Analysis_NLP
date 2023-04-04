@@ -1,10 +1,10 @@
-import A
+import Analysis
 import B
 import C
 
 import subprocess
 
-subprocess.run(['python', 'A.py'], check=True)
+subprocess.run(['python', 'Analysis.py'], check=True)
 subprocess.run(['python', 'B.py'], check=True)
 subprocess.run(['python', 'C.py'], check=True)
 
