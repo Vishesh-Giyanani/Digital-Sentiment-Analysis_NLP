@@ -1,6 +1,7 @@
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 from scipy.special import softmax
 import pandas as pd
+import re
 
 # Load the model and tokenizer
 roberta = "cardiffnlp/twitter-roberta-base-sentiment"
@@ -22,8 +23,12 @@ for text_column in text_columns:
     for index, row in df.iterrows():
         tweet = str(row[text_column])
 
-        # Skip the analysis if the tweet is null
-        if tweet.strip() == '':
+        # Skip the analysis if the tweet is null or contains only whitespace
+        if not tweet.strip():
+            continue
+
+        # Skip the analysis if the tweet contains only a number
+        if re.match(r'^\d+$', tweet.strip()):
             continue
 
         # Preprocess the tweet
@@ -47,6 +52,11 @@ for text_column in text_columns:
             l = labels[i]
             s = scores[i]
             df.at[index, f"{text_column}_{l}"] = s
+
+df.replace(0.23950220644474, 'Null')
+df.replace(0.52818888425827 , 'Null')
+df.replace(0.232308998703956, 'Null')
+
 
 # Save the updated DataFrame to the CSV file
 df.to_csv('NLP/Final.csv', index=False)
