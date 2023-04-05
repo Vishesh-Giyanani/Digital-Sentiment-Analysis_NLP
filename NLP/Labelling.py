@@ -36,7 +36,7 @@ def calculate_label(row):
     elif score >= 8 and (neutral + negative) >= 50:
         return 'Revised Detractor'
     else:
-        return '  '
+        return None
 
 # Apply the calculate_label function to the DataFrame to create a new column called 'Appliances_label'
 df['Appliances_label'] = df.apply(calculate_label, axis=1)
@@ -60,7 +60,7 @@ def calculate_label1(row):
     elif score >= 8 and (neutral + negative) >= 50:
         return 'Revised Detractor'
     else:
-        return '  '
+        return None
 
 # Apply the calculate_label1 function to the DataFrame to create a new column called 'Locks_label'
 df['Locks_label'] = df.apply(calculate_label1, axis=1)
@@ -84,7 +84,7 @@ def calculate_label2(row):
     elif score >= 8 and (neutral + negative) >= 50:
         return 'Revised Detractor'
     else:
-        return '  '
+        return None
  
 # Apply the calculate_label2 function to the DataFrame to create a new column called 'Interio_label'
 df['Interio_label'] = df.apply(calculate_label2, axis=1)
@@ -108,7 +108,7 @@ def calculate_label3(row):
     elif score >= 8 and (neutral + negative) >= 50:
         return 'Revised Detractor'
     else:
-        return '  '
+        return None
 
 # Apply the calculate_label3 function to the DataFrame to create a new column called 'Security_label'
 df['Security_label'] = df.apply(calculate_label3, axis=1)
