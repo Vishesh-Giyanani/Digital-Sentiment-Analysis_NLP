@@ -14,7 +14,7 @@ labels = ['Negative', 'Neutral', 'Positive']
 df = pd.read_csv('NLP/Book2.csv')
 
 # Select the columns to analyze
-text_columns = ["Appliances-Score", "Locks-Score", "Interio-Score", "Security-Score"]
+text_columns = ["Appliances-Text", "Locks-Text", "Interio-Text", "Security-Text"]
 
 
 # Iterate over the text columns of the DataFrame
