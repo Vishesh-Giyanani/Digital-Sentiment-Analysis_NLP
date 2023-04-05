@@ -54,7 +54,7 @@ for text_column in text_columns:
             df.at[index, f"{text_column}_{l}"] = s
 
 # Replace values in DataFrame with 'Null'
-df2 = df.round(10).replace({0.2395022064: 'Null', 0.5281888843: 'Null', 0.2323089987: 'Null'})
+df2 = df.round(10).replace({0.2395022064: 0, 0.5281888843: 0, 0.2323089987: 0})
 
 # Save the updated DataFrame to the CSV file
 df2.to_csv('NLP/Final.csv', index=False)
