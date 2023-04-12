@@ -11,7 +11,7 @@ tokenizer = AutoTokenizer.from_pretrained(roberta)
 labels = ['Negative', 'Neutral', 'Positive']
 
 # Read the CSV file
-df = pd.read_csv('NLP/Book2.csv')
+df = pd.read_csv('NLP/Pre-Final.csv')
 
 # Select the columns to analyze
 text_columns = ["Appliances-Text", "Locks-Text", "Interio-Text", "Security-Text"]
