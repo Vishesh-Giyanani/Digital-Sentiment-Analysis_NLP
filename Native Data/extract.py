@@ -48,8 +48,8 @@ lst = ["Appliances-Score", "Locks-Score", "Interio-Score", "Security-Score"]
 
 
 for i in lst:
+    df3[i] = df3[i].replace({pattern1: 10, pattern2: 0}, regex=True)
     
-    df3.loc[:, i] = df3[i].replace({pattern1: 10, pattern2: 0}, regex=True)
 
 
 
