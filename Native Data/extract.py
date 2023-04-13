@@ -32,7 +32,7 @@ df3.rename(columns={df3.columns[16]: "Occupation"}, inplace=True)
 df3.rename(columns={df3.columns[17]: "Household Income"}, inplace=True)
 df3.rename(columns={df3.columns[18]: "Marrital Status"}, inplace=True)
 df3.rename(columns={df3.columns[19]: "Household Ages"}, inplace=True)
-df3.rename(columns={df3.columns[20]: "Household Volunme"}, inplace=True)
+df3.rename(columns={df3.columns[20]: "Household Volume"}, inplace=True)
 
 
 print(df3)
