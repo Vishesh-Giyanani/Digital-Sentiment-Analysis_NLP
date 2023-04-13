@@ -13,7 +13,7 @@ labels = ['Negative', 'Neutral', 'Positive']
 df = pd.read_csv('NLP\Book2.csv')
 
 # Select the rows to analyze
-rows_to_analyze = [5, 7, 9, 11]
+rows_to_analyze = [5, 7, 9, 11] 
 df = df.iloc[rows_to_analyze]
 
 # Get the index of the column that contains the text data
