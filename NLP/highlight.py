@@ -27,12 +27,12 @@ sort_order = {'Positive': 1, 'Neutral': 2, 'Negative': 3}
 data.sort(key=lambda row: [sort_order.get(row[col], 0) for col in columns_to_sort])
 
 # Define the column numbers you want to highlight and the colors to use
-columns_to_highlight = {1:'FFFFFF',2:'FFFFFF',3:'FFFFFF',
-                        4: 'FFC0CB', 5: 'FFC0CB', 6: 'FFC0CB', 7: 'FFC0CB', 8: 'FFC0CB', 9: 'FFC0CB',
-                        10: 'ADD8E6', 11: 'ADD8E6', 12: 'ADD8E6', 13: 'ADD8E6', 14: 'ADD8E6', 15: 'ADD8E6',
-                        16: '98FB98', 17: '98FB98', 18: '98FB98', 19: '98FB98', 20: '98FB98', 21: '98FB98',
-                        22: 'E6E6FA', 23: 'E6E6FA', 24: 'E6E6FA', 25: 'E6E6FA', 26: 'E6E6FA', 27: 'E6E6FA',
-                        28:'FFFFFF', 29:'FFFFFF', 30:'FFFFFF',31:'FFFFFF', 32:'FFFFFF', 33:'FFFFFF', 
+columns_to_highlight = {1:'FFFFFF',2:'FFFFFF',3:'FFFFFF',4: 'FFFFFF',
+                        5: 'FFC0CB', 6: 'FFC0CB', 7: 'FFC0CB', 8: 'FFC0CB', 9: 'FFC0CB',10: 'FFC0CB',
+                        11: 'ADD8E6', 12: 'ADD8E6', 13: 'ADD8E6', 14: 'ADD8E6', 15: 'ADD8E6',16: 'ADD8E6',
+                        17: '98FB98', 18: '98FB98', 19: '98FB98', 20: '98FB98', 21: '98FB98',22: '98FB98',
+                        23: 'E6E6FA', 24: 'E6E6FA', 25: 'E6E6FA', 26: 'E6E6FA', 27: 'E6E6FA',28:'E6E6FA',
+                        29:'FFFFFF', 30:'FFFFFF',31:'FFFFFF', 32:'FFFFFF', 33:'FFFFFF', 
                         34:'FFFFFF', 35:'FFFFFF', 36:'FFFFFF', 37:'FFFFFF', 38:'FFFFFF', }
 
 # Iterate through the keys of columns_to_highlight and apply the fill style to the cells in each column
