@@ -25,7 +25,7 @@ def calculate_label(row):
     negative = float(row['Appliances-Text_Negative']) * 100 if row['Appliances-Text_Negative'] != 'Null' else 0
    
 
-      #previous logic
+    # previous logic
     #(if score >= 8 and positive >= 50: return 'Promoter'
     #elif score < 8 and positive >= 50: return 'Revised Promoter'
     #elif score <= 8 and (neutral + negative) >= 50: return 'Detractor'
