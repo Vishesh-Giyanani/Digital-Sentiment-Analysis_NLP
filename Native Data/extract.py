@@ -44,12 +44,20 @@ pattern1 = r'Extremely\s+likely\s*10'
 pattern2 = r'Not\s+at\s+all\s+likely\s*0'
 
 
+
+
 lst = ["Appliances-Score", "Locks-Score", "Interio-Score", "Security-Score"]
 
 
 for i in lst:
     df3[i] = df3[i].replace({pattern1: 10, pattern2: 0}, regex=True)
     
+
+# Check if string consists of numbers only, make it null
+lstE = ["Appliances-Text", "Locks-Text", "Interio-Text", "Security-Text"]
+
+for col in lstE:
+    df3[col] = np.where(df3[col].astype(str).str.isnumeric(), np.nan, df3[col])
 
 
 
