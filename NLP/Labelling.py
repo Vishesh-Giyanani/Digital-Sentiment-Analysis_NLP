@@ -27,16 +27,22 @@ def calculate_label(row):
     negative = float(row['Appliances-Text_Negative']) * 100 if row['Appliances-Text_Negative'] != 'Null' else 0
    
 
-    if score >= 8 and positive >= 50:
+      #previous logic
+    #(if score >= 8 and positive >= 50: return 'Promoter'
+    #elif score < 8 and positive >= 50: return 'Revised Promoter'
+    #elif score <= 8 and (neutral + negative) >= 50: return 'Detractor'
+    #elif score >= 8 and (neutral + negative) >= 50: return 'Revised Detractor'
+    #else: return None''
+    
+    # new logic for labelling
+    if  positive >= 70 :
         return 'Promoter'
-    elif score < 8 and positive >= 50:
-        return 'Revised Promoter'
-    elif score <= 8 and (neutral + negative) >= 50:
+    elif negative >= 60 :
         return 'Detractor'
-    elif score >= 8 and (neutral + negative) >= 50:
-        return 'Revised Detractor'
-    else:
+    elif negative == 0 :
         return None
+    else:
+        return 'passive'
 
 # Apply the calculate_label function to the DataFrame to create a new column called 'Appliances_label'
 df['Appliances_label'] = df.apply(calculate_label, axis=1)
@@ -51,16 +57,22 @@ def calculate_label1(row):
     negative = float(row['Locks-Text_Negative']) * 100 if row['Locks-Text_Negative'] != 'Null' else 0
    
 
-    if score >= 8 and positive >= 50:
+      #previous logic
+    #(if score >= 8 and positive >= 50: return 'Promoter'
+    #elif score < 8 and positive >= 50: return 'Revised Promoter'
+    #elif score <= 8 and (neutral + negative) >= 50: return 'Detractor'
+    #elif score >= 8 and (neutral + negative) >= 50: return 'Revised Detractor'
+    #else: return None''
+    
+    # new logic for labelling
+    if  positive >= 70 :
         return 'Promoter'
-    elif score < 8 and positive >= 50:
-        return 'Revised Promoter'
-    elif score <= 8 and (neutral + negative) >= 50:
+    elif negative >= 60 :
         return 'Detractor'
-    elif score >= 8 and (neutral + negative) >= 50:
-        return 'Revised Detractor'
-    else:
+    elif negative == 0 :
         return None
+    else:
+        return 'passive'
 
 # Apply the calculate_label1 function to the DataFrame to create a new column called 'Locks_label'
 df['Locks_label'] = df.apply(calculate_label1, axis=1)
@@ -75,17 +87,22 @@ def calculate_label2(row):
     negative = float(row['Interio-Text_Negative']) * 100 if row['Interio-Text_Negative'] != 'Null' else 0
    
    
-    if score >= 8 and positive >= 50:
+      #previous logic
+    #(if score >= 8 and positive >= 50: return 'Promoter'
+    #elif score < 8 and positive >= 50: return 'Revised Promoter'
+    #elif score <= 8 and (neutral + negative) >= 50: return 'Detractor'
+    #elif score >= 8 and (neutral + negative) >= 50: return 'Revised Detractor'
+    #else: return None''
+    
+    # new logic for labelling
+    if  positive >= 70 :
         return 'Promoter'
-    elif score < 8 and positive >= 50:
-        return 'Revised Promoter'
-    elif score <= 8 and (neutral + negative) >= 50:
+    elif negative >= 60 :
         return 'Detractor'
-    elif score >= 8 and (neutral + negative) >= 50:
-        return 'Revised Detractor'
-    else:
+    elif negative == 0 :
         return None
- 
+    else:
+        return 'passive'
 # Apply the calculate_label2 function to the DataFrame to create a new column called 'Interio_label'
 df['Interio_label'] = df.apply(calculate_label2, axis=1)
 
@@ -99,16 +116,22 @@ def calculate_label3(row):
     negative = float(row['Security-Text_Negative']) * 100 if row['Security-Text_Negative'] != 'Null' else 0
    
    
-    if score >= 8 and positive >= 50:
+    #previous logic
+    #(if score >= 8 and positive >= 50: return 'Promoter'
+    #elif score < 8 and positive >= 50: return 'Revised Promoter'
+    #elif score <= 8 and (neutral + negative) >= 50: return 'Detractor'
+    #elif score >= 8 and (neutral + negative) >= 50: return 'Revised Detractor'
+    #else: return None''
+    
+    # new logic for labelling
+    if  positive >= 70 :
         return 'Promoter'
-    elif score < 8 and positive >= 50:
-        return 'Revised Promoter'
-    elif score <= 8 and (neutral + negative) >= 50:
+    elif negative >= 60 :
         return 'Detractor'
-    elif score >= 8 and (neutral + negative) >= 50:
-        return 'Revised Detractor'
-    else:
+    elif negative == 0 :
         return None
+    else:
+        return 'passive'
 
 # Apply the calculate_label3 function to the DataFrame to create a new column called 'Security_label'
 df['Security_label'] = df.apply(calculate_label3, axis=1)
