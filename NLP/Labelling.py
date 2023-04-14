@@ -1,5 +1,3 @@
-##This code is written with respect to 'column names'
-
 import pandas as pd
 
 # Loading CSV file into a DataFrame
@@ -39,7 +37,7 @@ def calculate_label(row):
         return 'Promoter'
     elif negative >= 60 :
         return 'Detractor'
-    elif negative == 0 :
+    elif positive == 0 :
         return None
     else:
         return 'passive'
