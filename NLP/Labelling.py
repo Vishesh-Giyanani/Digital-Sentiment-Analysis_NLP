@@ -67,7 +67,7 @@ def calculate_label1(row):
         return 'Promoter'
     elif negative >= 60 :
         return 'Detractor'
-    elif negative == 0 :
+    elif positive == 0 :
         return None
     else:
         return 'passive'
@@ -97,7 +97,7 @@ def calculate_label2(row):
         return 'Promoter'
     elif negative >= 60 :
         return 'Detractor'
-    elif negative == 0 :
+    elif positive == 0 :
         return None
     else:
         return 'passive'
@@ -126,7 +126,7 @@ def calculate_label3(row):
         return 'Promoter'
     elif negative >= 60 :
         return 'Detractor'
-    elif negative == 0 :
+    elif positive == 0 :
         return None
     else:
         return 'passive'
