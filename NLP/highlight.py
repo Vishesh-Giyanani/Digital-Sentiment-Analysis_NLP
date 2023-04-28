@@ -5,12 +5,12 @@ from openpyxl.styles import PatternFill, Border, Side,Font
 
 
 # Read the input CSV file
-with open('./NLP/final3.csv', 'r') as infile:
+with open('./NLP/Iteration_3.csv', 'r') as infile:
     reader = csv.reader(infile)
     data = [tuple(row) for row in reader]
   
 # remove first row
-with open('./NLP/final3.csv', 'r') as infile:
+with open('./NLP/Iteration_3.csv', 'r') as infile:
     reader = csv.reader(infile)
     data = [tuple(row) for row in reader][1:] 
 
@@ -63,9 +63,9 @@ for col in worksheet.columns:
 
    
 # Write the output to a new CSV file
-with open('./NLP/final4.csv', 'w', newline='') as outfile:
+with open('./NLP/Final.csv', 'w', newline='') as outfile:
     writer = csv.writer(outfile)
     for row in data:
         writer.writerow(row)
 
-workbook.save('./NLP/final4.xlsx')
+workbook.save('./NLP/Final.xlsx')

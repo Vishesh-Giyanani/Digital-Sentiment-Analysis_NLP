@@ -11,7 +11,7 @@ tokenizer = AutoTokenizer.from_pretrained(roberta)
 labels = ['Negative', 'Neutral', 'Positive']
 
 # Read the CSV file
-df = pd.read_csv('NLP/Pre-Final.csv')
+df = pd.read_csv('NLP/cleaned_data.csv')
 
 # Select the columns to analyze
 text_columns = ["Appliances-Text", "Locks-Text", "Interio-Text", "Security-Text"]
@@ -59,7 +59,7 @@ df2 = df.round(10).replace({0.2395021617: 0, 0.528188825: 0, 0.2323089987: 0})
 
 
 # Save the updated DataFrame to the CSV file
-df2.to_csv('NLP/Final.csv', index=False)
+df2.to_csv('NLP/Iteration_1.csv', index=False)
 
 
 

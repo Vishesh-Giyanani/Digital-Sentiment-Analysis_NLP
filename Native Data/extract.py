@@ -71,4 +71,4 @@ pattern3 = r'[^a-zA-Z0-9\s]+'
 #for i in lstE:
 #    df3[i] = df3[i].apply(lambda x: re.sub(pattern3, '', str(x)))
 
-df3.to_csv('./NLP/Pre-Final.csv')
+df3.to_csv('./NLP/cleaned_data.csv')

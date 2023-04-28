@@ -2,7 +2,7 @@ import csv
 import pandas as pd
 
 # Open the CSV file and create a csv.reader object
-with open('./NLP/Final2.csv', 'r') as csv_file:
+with open('./NLP/Iteration_2.csv', 'r') as csv_file:
     reader = csv.reader(csv_file)
 
     # Create a new list to store the rearranged data
@@ -17,7 +17,7 @@ with open('./NLP/Final2.csv', 'r') as csv_file:
 csv_file.close()
 
 # Open the same CSV file again and create a csv.writer object
-with open('./NLP/Final2.csv', 'w', newline='') as csv_file:
+with open('./NLP/Iteration_2.csv', 'w', newline='') as csv_file:
     writer = csv.writer(csv_file)
 
     # Loop through the rows of the new list and write each row to the CSV file
@@ -27,4 +27,4 @@ with open('./NLP/Final2.csv', 'w', newline='') as csv_file:
 df = pd.DataFrame(new_data)
 
 # Write the updated DataFrame to a new csv file
-df.to_csv('./NLP/final3.csv', index=False)
+df.to_csv('./NLP/Iteration_3.csv', index=False)

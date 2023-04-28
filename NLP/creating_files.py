@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Load the original CSV file into a pandas DataFrame
-df = pd.read_csv('./NLP/Final2.csv')
+df = pd.read_csv('./NLP/Iteration_2.csv')
 
 
 # Define the columns to extract

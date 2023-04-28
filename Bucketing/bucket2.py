@@ -66,7 +66,7 @@ plt.bar(categories, scores)
 # add labels and title
 plt.xlabel("Categories")
 plt.ylabel("Scores")
-plt.title("Sentiment Analysis Scores")
+plt.title("Interio")
 
 # display the chart
 plt.show()
