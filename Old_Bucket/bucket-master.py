@@ -2,10 +2,10 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # read the CSV file into a DataFrame
-df = pd.read_csv("./NLP/Final.csv")
+df = pd.read_csv("./NLP/Iteration_2.csv")
  
 # define the columns to search
-columns_to_search = ["Locks-Text"]
+columns_to_search = ["Appliances-Text", "Locks-Text", "Interio-Text", "Security-Text"]
 
 # define the lists of keywords for each category
 product_keywords = ['design', 'modern', 'stylish', 'attractive', 'features', 'quality', 'durable', 'long lasting', 'material', 'innovation']
@@ -66,8 +66,8 @@ plt.bar(categories, scores)
 
 # add labels and title
 plt.xlabel("Categories")
-
-plt.title("Locks")
+plt.ylabel("Scores")
+plt.title("Sentiment Analysis Scores")
 
 # display the chart
 plt.show()
