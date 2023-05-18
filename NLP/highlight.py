@@ -21,10 +21,6 @@ worksheet = workbook.active
 
 # Define the column numbers you want to sort and the order to use
 columns_to_sort = [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27]
-sort_order = {'Positive': 1, 'Neutral': 2, 'Negative': 3}
-
-# Sort the data by the selected columns and sort order
-data.sort(key=lambda row: [sort_order.get(row[col], 0) for col in columns_to_sort])
 
 # Define the column numbers you want to highlight and the colors to use
 columns_to_highlight = {1:'FFFFFF',2:'FFFFFF',3:'FFFFFF',4: 'FFFFFF',

@@ -1,7 +1,7 @@
 import pandas as pd
 
 # read the csv file into a pandas dataframe
-df = pd.read_csv('./NLP/Iteration_2.csv')
+df = pd.read_csv('./NLP/Appliances.csv')
 
 # define the lists of keywords for each category
 product_keywords = ['design', 'modern', 'stylish', 'attractive', 'features', 'quality', 'durable', 'long lasting', 'material', 'innovation']
