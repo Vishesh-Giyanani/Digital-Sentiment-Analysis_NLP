@@ -6,15 +6,13 @@ Software requirements Specifications
 
 Technologies used:
 
-1.	Python
-a.	Transformers
+a.	Python
 b.	Pandas
 c.	CSV
-d.	AutoTokenizer
-e.	AutoModelForSequenceClassification
+d.	Tokenizer
+e.	ModelForSequenceClassification
 f.	Scipy
-2.	Hugging face twitter-roberta-base
-3.	Excel
+g.	Excel
 
 
 
